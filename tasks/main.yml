@@ -64,6 +64,8 @@
 
 - name: Build linux {{ target_linux_tree }}
   command: "{{ target_linux_make_cmd }}"
+  register: build
+  changed_when: "build.rc == 0"
   args:
     chdir: "{{ target_linux_dir_path }}"
   tags: [ 'linux', 'build-linux' ]
@@ -102,6 +104,8 @@
   become_flags: 'su - -c'
   become_method: sudo
   command: "{{ target_linux_make_install_cmd }}"
+  register: install_done
+  changed_when: "install_done.rc == 0"
   args:
     chdir: "{{ target_linux_dir_path }}"
   tags: [ 'linux', 'install-linux' ]
