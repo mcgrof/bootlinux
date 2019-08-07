@@ -54,6 +54,8 @@
 
 - name: Configure linux {{ target_linux_tree }}
   shell: yes "" | make oldconfig
+  register: configure_done
+  changed_when: "configure_done.rc == 0"
   args:
     chdir: "{{ target_linux_dir_path }}"
   tags: [ 'linux', 'oldconfig' ]
