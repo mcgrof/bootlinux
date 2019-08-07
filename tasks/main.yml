@@ -40,7 +40,7 @@
   command: "git am {{ target_linux_extra_patch }}"
   args:
     chdir: "{{ target_linux_dir_path }}"
-  tags: [ 'linux', 'extra-patch' ]
+  tags: [ 'linux', 'extra-patch', 'skip_ansible_lint' ]
   when: target_linux_extra_patch is defined
 
 - name: Copy configuration for linux {{ target_linux_tree }}
