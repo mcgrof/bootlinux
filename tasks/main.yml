@@ -53,7 +53,9 @@
   tags: [ 'linux', 'git', 'config' ]
 
 - name: Configure linux {{ target_linux_tree }}
-  shell: yes "" | make oldconfig
+  shell: |
+    set -o pipefail
+    yes "" | make oldconfig
   register: configure_done
   changed_when: "configure_done.rc == 0"
   args:
