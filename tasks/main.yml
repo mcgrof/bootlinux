@@ -58,7 +58,7 @@
     yes "" | make oldconfig
   register: configure_done
   changed_when: configure_done.rc == 0 or configure_done.rc == 141
-  failed_when: configure_done.rc != 0 and swap_exists.rc != 141
+  failed_when: configure_done.rc != 0 and configure_done.rc != 141
   args:
     chdir: "{{ target_linux_dir_path }}"
     executable: /bin/bash
