@@ -1,4 +1,3 @@
-
 - name: Run update-grub
   become: yes
   become_flags: 'su - -c'
