@@ -60,6 +60,7 @@
   changed_when: "configure_done.rc == 0"
   args:
     chdir: "{{ target_linux_dir_path }}"
+    executable: /bin/bash
   tags: [ 'linux', 'oldconfig' ]
 
 - name: Build linux {{ target_linux_tree }}
