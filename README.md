@@ -93,6 +93,12 @@ the bootlinux role you can run:
 ansible-playbook -i hosts -l baseline --tags data_partition,partition bootlinux.yml
 ```
 
+To reboot all hosts:
+
+```bash
+ansible-playbook -i hosts bootlinux.yml --tags reboot
+```
+
 For further examples refer to one of this role's users, the
 [https://github.com/mcgrof/kdevops](kdevops) project or the
 [https://github.com/mcgrof/oscheck](oscheck) project from where
