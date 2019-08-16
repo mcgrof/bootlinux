@@ -104,6 +104,15 @@ For further examples refer to one of this role's users, the
 [https://github.com/mcgrof/oscheck](oscheck) project from where
 this code originally came from.
 
+# TODO
+
+## Avoiding carrying linux-next configs
+
+It seems a waste of space to be adding configurations for linux-next for all
+tags. It seems easier to just look for the latest linux-next and try that.
+We just symlink linux-next files when we really need to, and when something
+really needs a new config, we then just add a new file.
+
 License
 -------
 
