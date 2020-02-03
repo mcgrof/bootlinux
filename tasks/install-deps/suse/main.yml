@@ -1,4 +1,20 @@
 ---
-- name: Set up apt for Red Hat sources
+- name: Install Linux kernel build dependencies for SUSE sources
+  become: yes
+  become_method: sudo
   zypper:
-    update_cache: yes
+    name:
+      - bison
+      - flex
+      - git-core
+      - gcc
+      - make
+      - gawk
+      - bc
+      - dump
+      - sed
+      - libopenssl-devel
+      - libelf-devel
+    extra_args: '--allow-vendor-change'
+    state: latest
+    disable_recommends: no
