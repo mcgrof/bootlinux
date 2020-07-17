@@ -16,6 +16,7 @@
       - libopenssl-devel
       - libelf-devel
       - diffutils
+      - net-tools
     extra_args: '--allow-vendor-change'
     state: latest
     disable_recommends: no
