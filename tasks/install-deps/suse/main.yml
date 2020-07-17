@@ -15,6 +15,7 @@
       - sed
       - libopenssl-devel
       - libelf-devel
+      - diffutils
     extra_args: '--allow-vendor-change'
     state: latest
     disable_recommends: no
