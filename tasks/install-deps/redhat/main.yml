@@ -32,3 +32,4 @@
       - xfsprogs
       - e2fsprogs
       - btrfs-progs
+      - elfutils-libelf-devel
