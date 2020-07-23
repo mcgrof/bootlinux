@@ -18,6 +18,9 @@
       - diffutils
       - net-tools
       - ncurses-devel
+      - xfsprogs
+      - e2fsprogs
+      - btrfsprogs
     extra_args: '--allow-vendor-change'
     state: latest
     disable_recommends: no
