@@ -29,5 +29,11 @@
       - xfsprogs
       - e2fsprogs
       - btrfs-progs
+      - ntfs-3g
+      - mdadm
+      - rpcbind
+      - portmap
+      - hwinfo
+      - open-iscsi
     state: present
   tags: linux

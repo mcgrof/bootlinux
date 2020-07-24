@@ -33,3 +33,9 @@
       - e2fsprogs
       - btrfs-progs
       - elfutils-libelf-devel
+      - ntfs-3g
+      - mdadm
+      - rpcbind
+      - portmap
+      - hwinfo
+      - iscsi-initiator-utils

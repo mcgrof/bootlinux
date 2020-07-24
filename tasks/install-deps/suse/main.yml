@@ -21,6 +21,12 @@
       - xfsprogs
       - e2fsprogs
       - btrfsprogs
+      - ntfs-3g
+      - mdadm
+      - rpcbind
+      - portmap
+      - hwinfo
+      - open-iscsi
     extra_args: '--allow-vendor-change'
     state: latest
     disable_recommends: no
