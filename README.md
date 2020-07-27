@@ -14,6 +14,18 @@ You are expected to have an extra partition
 Role Variables
 --------------
 
+  * infer_uid_and_group: defaults to False, if set to True, then we will ignore
+    the passed on data_user and data_group and instead try to infer this by
+    inspecting the `whoami` and getent on the logged in target system we are
+    provisioning. So if user sam is running able on a host, targetting a system
+    called foofighter and logging into that system using username pincho,
+    then the data_user will be set overwritten and set to pincho. We will then
+    also lookup for pincho's default group id and use that for data_group.
+    This is useful if you are targetting a slew of systems and don't really
+    want to deal with the complexities of the username and group, and the
+    default target username you use to ssh into a system suffices to use as
+    a base. This is set to False to remain compatible with old users of
+    this role.
   * data_path: where to place the git trees we clone under
   * data_user: the user to assign permissions to
   * data_group: the group to assign permissions to
