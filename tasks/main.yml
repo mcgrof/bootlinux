@@ -47,7 +47,7 @@
   set_fact:
     user: "hplip"
     data_user: "{{ target_user }}"
-    data_group: "{{ ((getent_on_group.values() | first).values() | first).keys() | first}}"
+    data_group: "{{ ((getent_on_group.values() | first).values() | first).keys() | first }}"
   when:
     - infer_uid_and_group|bool
 
